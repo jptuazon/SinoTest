@@ -7,7 +7,7 @@
 sino_null(size, prec = 1024, dlim = 10, sims = 1000)
 }
 \arguments{
-\item{size}{A vector containing the data}
+\item{size}{The sample size}
 
 \item{prec}{The number of equally spaced points at which the density
 is to be estimated using \code{stats::density}}
