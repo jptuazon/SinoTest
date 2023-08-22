@@ -2,8 +2,12 @@ Package: SinoTest
 Title: A Lilliefors-like Kernel Density Estimate Test for Normality
 Version: 1.0.0
 Authors@R: c(
-    person("Justin Philip", "Tuazon", , "jpstuazon@gmail.com", role = c("aut", "cre")),
-    person("John Kenneth", "Batac", "johnkennethbatac.07@gmail.com", role = c("aut")))
+    person(given = "Justin Philip", family = "Tuazon", 
+    email = "jpstuazon@gmail.com", role = c("aut", "cre")),
+    person(given = "John Kenneth", family = "Batac", 
+    email = "johnkennethbatac.07@gmail.com", role = c("aut")),
+    person(given = "Cielo", family = "Paragas", role = c("aut")),
+    person(given = "Aivhane", family = "Andres", role = c("aut")))
 Description: The Simulated Normality (or SiNo) Test is a Lilliefors-like 
     Kernel Density Estimate Test for Normality. It uses the integral of the 
     L1-distance over the reals as the test statistic. The null distribution 
