@@ -15,6 +15,10 @@ Description: The Simulated Normality (or SiNo) Test is a Lilliefors-like
     is first standardized (z-score) and then, the kernel density estimate 
     is obtained based on the standardized sample. This kernel density 
     estimate is then compared with the standard normal density.
+Imports:
+    stats,
+    spatstat.explore,
+    cubature
 License: use_mit_license()
 LazyData: true
 Encoding: UTF-8
