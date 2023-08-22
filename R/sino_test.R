@@ -91,7 +91,7 @@ sino_test <- function(x, simulations = 1000, precision = 1024, def_lim = 10,
   ## Perform the test
   if (is.null(ref_dist)) {
     if ((length(x) >= 5) && (length(x) <= 1000)) {
-      null_dist <- SinoTest::null_dists[[length(x) - 4]]
+      null_dist <- SinoTest::null_densities[[length(x) - 4]]
     } else {
       null_dist <- sino_null(length(x), precision, def_lim, simulations)
     }
