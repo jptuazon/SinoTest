@@ -20,6 +20,7 @@
 #' \code{density} (i.e., kernel density estimate) or a cumulative distribution
 #' function (i.e., an object of class \code{function})
 #' @param sig_level The level of significance
+#' @param show_message If \code{TRUE}, results will be printed out
 #'
 #' @return A named list containing the following components: \cr
 #' \itemize{

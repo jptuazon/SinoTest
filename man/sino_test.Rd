@@ -32,6 +32,8 @@ to approximately 0 at the extremes)}
 function (i.e., an object of class \code{function})}
 
 \item{sig_level}{The level of significance}
+
+\item{show_message}{If \code{TRUE}, results will be printed out}
 }
 \value{
 A named list containing the following components: \cr
