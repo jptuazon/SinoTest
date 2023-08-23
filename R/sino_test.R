@@ -62,7 +62,8 @@
 #' @export
 
 sino_test <- function(x, simulations = 1000, precision = 1024, def_lim = 10,
-                      ref_dist = NULL, sig_level = 0.05) {
+                      ref_dist = NULL, sig_level = 0.05,
+                      show_message = TRUE) {
 
   ## Function for calculating test statistic
   sino_stat <- function(dat, prec, dlim) {
@@ -115,14 +116,16 @@ sino_test <- function(x, simulations = 1000, precision = 1024, def_lim = 10,
   if (p_val == 0) {
     p_val <- "< 0.00001"
   }
-  message(paste("\nSimulated Normality Test\n",
-                "Null Hypothesis: The population distribution is a ",
-                "normal distirbution.\n",
-                "Data: ", deparse(substitute(x)), "\n",
-                "Test Statistic: ", test_stat, "\n",
-                "p-value: ", p_val, "\n",
-                "Result: ", interp,
-                " at ", sig_level, " level of significance\n", sep = ""))
+  if (show_message) {
+    message(paste("\nSimulated Normality Test\n",
+                  "Null Hypothesis: The population distribution is a ",
+                  "normal distirbution.\n",
+                  "Data: ", deparse(substitute(x)), "\n",
+                  "Test Statistic: ", test_stat, "\n",
+                  "p-value: ", p_val, "\n",
+                  "Result: ", interp,
+                  " at ", sig_level, " level of significance\n", sep = ""))
+  }
   results <- list(data_name = deparse(substitute(x)), data = x,
                   statistic = test_stat, p_value = p_val,
                   simulations = simulations, precision = precision,

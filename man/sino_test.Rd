@@ -10,7 +10,8 @@ sino_test(
   precision = 1024,
   def_lim = 10,
   ref_dist = NULL,
-  sig_level = 0.05
+  sig_level = 0.05,
+  show_message = TRUE
 )
 }
 \arguments{
