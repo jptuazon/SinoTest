@@ -63,10 +63,10 @@ estimate is then compared with the standard normal density.
 }
 \note{
 If \code{ref_dist = NULL}, the results of the test will be
-non-deterministic for sample sizes less than 5 or greater than 1500. This is
+non-deterministic for sample sizes less than 5 or greater than 2000. This is
 because the null distribution is generated every time using Monte Carlo
 simulations for such cases. Pre-computed null distributions are available
-only for samples with size between 5 and 1500 (inclusive). Thus, running the
+only for samples with size between 5 and 2000 (inclusive). Thus, running the
 test on the same dataset more than once with \code{ref_dist = NULL} may
 yield different test statistics (but they are expected to be close). You
 may generate your own estimates for the null distribution using
