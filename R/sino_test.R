@@ -114,16 +114,14 @@ sino_test <- function(x, simulations = 1000, precision = 1024, def_lim = 10,
   } else {
     interp <- "Fail to reject the null hypothesis"
   }
-  if (p_val == 0) {
-    p_val <- "< 0.00001"
-  }
+  p_message <- ifelse(p_val == 0, "< 0.00001", p_val)
   if (show_message) {
     message(paste("\nSimulated Normality Test\n",
                   "Null Hypothesis: The population distribution is a ",
                   "normal distirbution.\n",
                   "Data: ", deparse(substitute(x)), "\n",
                   "Test Statistic: ", test_stat, "\n",
-                  "p-value: ", p_val, "\n",
+                  "p-value: ", p_message, "\n",
                   "Result: ", interp,
                   " at ", sig_level, " level of significance\n", sep = ""))
   }
